@@ -1,6 +1,6 @@
-# Automação de Apontamento (Discovery/Leega)
+# Automação de Apontamento (Discovery)
 
-Este projeto realiza a **automação de apontamento** em uma plataforma web específica (Discovery/Leega). A aplicação permite:
+Este projeto realiza a **automação de apontamento** em uma plataforma web específica (Discovery). A aplicação permite:
 
 1. **Login automático** no sistema.
 2. **Apontamento de dias úteis** de forma dinâmica, considerando feriados nacionais/municipais (estado de SP).
@@ -37,3 +37,26 @@ venv\Scripts\activate
 
 # Instala as bibliotecas
 pip install customtkinter selenium holidays
+
+# Instala as bibliotecas
+pip python main.py
+
+## Uso
+
+1. Garanta que o msedgedriver.exe esteja na mesma pasta do script ou com o caminho apontado corretamente no código.
+2. Execute o script (ex: python main.py).
+3. Preencha as credenciais de login (usuário e senha).
+4. Se desejar executar em modo headless (sem abrir janela), marque o checkbox correspondente.
+5. Pressione Start para iniciar o processo de automação.
+
+**Dica:** Clique duas vezes em qualquer célula de Horas ou % do Mês para editar, e na coluna “Bloquear” para pular determinado dia.
+
+## Gerando um Executável (.exe) com PyInstaller
+
+1. **Instale o PyInstaller** pip install pyinstaller
+2. **Navegue** até a pasta do projeto (onde está main.py).
+3. **Gere o executável** pyinstaller --onefile -w --name=leega_discovery_auto main.py
+4. Ao terminar, na pasta dist/ estará o leega_discovery_auto.exe.
+5. Copie o msedgedriver.exe para dentro de dist/, junto ao .exe.
+
+
