@@ -1,1 +1,5 @@
-.\teste.spec
+build/ 
+dist/
+*.spec
+venv/
+*.pyc pycache/
